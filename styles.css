@@ -1,0 +1,1181 @@
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* ===================================================== */
+/* ============== Pallette ============================== */
+/* ====================================================== */
+:root {
+    /* Company A (JALUR) Colors */
+    --jalur-dark: #000000;
+    --jalur-primary: rgb(255, 25, 25);
+    --jalur-secondary: #ffffff;
+    --jalur-dark-light: #666666;
+    --jalur-primary-light: rgba(255, 25, 25, 0.5);
+    --jalur-secondary-light: #d3d3d3;
+
+    /* JALUR */
+    --jalur-skill-inactive-bg: #ff8282;
+    --jalur-skill-active-bg: #ff1919;
+    --jalur-skill-active-text: #ffffff;
+
+    /* Company B (PTR) Colors */
+    --ptr-dark: #000000;
+    --ptr-primary: rgb(23, 55, 94);
+    --ptr-secondary: rgb(236, 151, 82);
+    --ptr-dark-light: #666666;
+    --ptr-primary-light: rgba(23, 55, 94, 0.5);
+    --ptr-secondary-light: #d3d3d3;
+
+    /* PTR */
+    --ptr-skill-inactive-bg: #d3dbe8;
+    --ptr-skill-active-bg: #17375e;
+    --ptr-skill-active-text: #ffffff;
+
+	/* ERPT Color Scheme */
+    --erpt-dark: #000000;  /* Black for strong emphasis and text */
+    --erpt-primary: #204D74;  /* Deep blue for primary interface elements */
+    --erpt-secondary: #ffffff; /*#57A0D3;  /* Lighter blue for secondary interface elements */
+    --erpt-dark-light: #666666;  /* Grey for less emphasized text or shadows */
+    --erpt-primary-light: #B0CFE7;  /* Light blue for backgrounds or lighter elements */
+    --erpt-secondary-light: rgba(87, 160, 211, 0.5);  /* Translucent light blue for overlays or decorative elements */
+
+    /* ERPT */
+    --erpt-skill-inactive-bg: #9db8d2;
+    --erpt-skill-active-bg: #204d74;
+    --erpt-skill-active-text: #ffffff;
+
+    /* Greyscale Colors */
+    --greyscale-dark: #333333;
+    --greyscale-primary: #666666;
+    --greyscale-secondary: #999999;
+    --greyscale-dark-light: #666666;
+    --greyscale-primary-light: #cccccc;
+    --greyscale-secondary-light: #e6e6e6;
+
+    /* Testing Colors */
+	--testing-pink: #ff69b4; /* Hot Pink */
+
+    /* VUPICO Theme */
+    --vupico-dark: #1A1A1A;
+    --vupico-primary: #22367A;
+    --vupico-primary-light: #6983D5;
+    --vupico-secondary: #32A6AA;
+    --vupico-secondary-light: #88DADC;
+    --vupico-dark-light: #444B66;
+
+    --vupico-skill-inactive-bg: #B8C3F2;
+    --vupico-skill-active-bg: #22367A;
+    --vupico-skill-active-text: #FFFFFF;
+
+}
+
+/* ERPT */
+/* :root { */
+    /* --dark: var(--erpt-dark); */
+    /* --dark-light: var(--erpt-dark-light); */
+    /* --primary: var(--erpt-primary); */
+    /* --secondary: var(--erpt-secondary); */
+    /* --primary-light: var(--erpt-primary-light); */
+    /* --secondary-light: var(--erpt-secondary-light); */
+	/* --red: rgb(255, 25, 25); */
+/* } */
+
+/* GREYSCALE */
+/* :root {
+    --dark: var(--greyscale-dark);
+    --dark-light: var(--greyscale-dark-light);
+    --primary: var(--greyscale-primary);
+    --secondary: var(--greyscale-secondary);
+    --primary-light: var(--greyscale-primary-light);
+    --secondary-light: var(--greyscale-secondary-light);
+} */
+
+/* PTR */
+/* :root {
+    --dark: var(--ptr-dark);
+    --dark-light: var(--ptr-dark-light);
+    --primary: var(--ptr-primary);
+    --secondary: var(--ptr-secondary);
+    --primary-light: var(--ptr-primary-light);
+    --secondary-light: var(--ptr-secondary-light);
+} */
+
+/* JALUR */
+/* :root { */
+    /* --dark: var(--jalur-dark); */
+    /* --dark-light: var(--jalur-dark-light); */
+    /* --primary: var(--jalur-primary); */
+    /* --primary-light: var(--jalur-primary-light); */
+    /* --secondary: var(--jalur-secondary); */
+    /* --secondary-light: var(--jalur-secondary-light); */
+/* } */
+
+/* TESTING - Apply to see what page elements are not following the standard colors */
+/* :root {
+    --dark: var(--testing-pink);
+    --primary: var(--testing-pink);
+    --secondary: var(--testing-pink);
+    --primary-light: var(--testing-pink);
+    --secondary-light: var(--testing-pink);
+} */
+
+
+/* ===================================================== */
+/* ============== SolutionPoint ============ */
+/* ===================================================== */
+/* .message-item { */
+    /* border: 2px solid var(--primary); */
+    /* border-radius: 10px; */
+    /* background-color: var(--primary-light); */
+    /* padding: 10px; */
+    /* margin-bottom: 10px; */
+/* } */
+
+/* .message-item { */
+    /* border: 1px solid var(--primary); /* Border color */ */
+    /* border-radius: 10px; /* Rounded corners */ */
+    /* background-color: var(--primary-light); /* Background color */ */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */ */
+    /* padding: 15px; /* Space inside */ */
+    /* margin-bottom: 10px; /* Space between items */ */
+/* } */
+
+/* .message-header { */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* font-weight: bold; */
+/* } */
+
+.thread-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bounty-field {
+    width: 80px;
+}
+
+.currency-selector {
+    width: 100px;
+}
+
+.user-currency-value {
+    margin-left: 10px;
+}
+
+
+/* ===================================================== */
+/* ============== CheckCheck =========================== */
+/* ===================================================== */
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2px 0;
+    /* border: 1px solid #ccc; */
+    /* padding: 10px; */
+    background: var(--secondary-light);
+	border-radius: 5px; /* Rounded corners for styling */
+}
+
+.task .text {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.task .button-group {
+    display: flex;
+    gap: 5px;
+}
+
+.drag-handle {
+    font-size: 24px; /* Increase icon size */
+    font-weight: bold; /* Make it bold */
+    cursor: grab; /* Show grab cursor */
+    padding: 5px; /* Add some spacing */
+    display: inline-block; /* Ensure proper positioning */
+}
+
+.task.done .text {
+    text-decoration: line-through;
+    color: grey;
+    font-style: italic;
+}
+
+.trashcan {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: var(--primary-light);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.trashcan:hover {
+    transform: translateX(-50%) scale(1.1);
+    background: var(--primary-dark);
+}
+
+.trashcan i {
+    font-size: 36px;
+    color: white;
+}
+
+/* ===================================================== */
+/* ============== Mobile Phone Optimization ============ */
+/* ===================================================== */
+/* ======================== General Mobile Optimization ======================== */
+@media (max-width: 768px) {
+    /* Base font size and spacing adjustments */
+    body, html {
+        font-size: 16px; /* Larger base font for smaller screens */
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* Header and Action Box Adjustments */
+    .header-container, .header_actionbox {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .pageheading {
+        font-size: 20px;
+        padding: 10px 5px;
+        text-align: center;
+    }
+
+    /* Button & Icon Adjustments for Touch Accessibility */
+    .icon-button {
+        font-size: 24px; /* Increase icon size */
+        padding: 8px;
+        margin: 5px;
+    }
+
+    /* Form Layout Adjustments */
+    form {
+        width: 90%;
+        padding: 15px;
+        margin: auto;
+    }
+
+    .form-group-compact {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-start;
+        margin-bottom: 6px;
+    }
+
+    .form-group {
+        display: flex;
+        /* flex-direction: column; */
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+
+    label {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        font-size: 16px; /* Larger text size for inputs */
+    }
+
+    /* Table Adjustments for Data Tables */
+    .sap-ecc-ddic-table {
+        font-size: 12px; /* Adjust table font size */
+        overflow-x: auto; /* Enable horizontal scroll */
+    }
+
+    /* Layout Adjustments for Content Sections */
+    .content {
+        padding: 10px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Footer Adjustments */
+    footer {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+/* ======================== Scratchpad Page Specific ======================== */
+@media (max-width: 768px) {
+    /* Scratchpad Page Adjustments */
+    #scratchList {
+        font-size: 16px; /* Larger text for readability */
+        padding: 5px;
+    }
+
+    #scratchContent {
+        width: 95%;
+        height: 200px; /* Smaller height for mobile */
+    }
+}
+
+/* ======================== Quicklinks Page Specific ======================== */
+@media (max-width: 768px) {
+    /* Quicklinks Tile Adjustments for Mobile */
+    .ql_tiles-container {
+        justify-content: flex-start; /* Align tiles to the left for better flow on small screens */
+        padding: 10px;
+    }
+
+    .ql_tile {
+        width: 80px; /* Larger tile width for mobile */
+        height: 80px; /* Larger tile height */
+        margin: 6px; /* Add some space between tiles */
+        font-size: 14px; /* Increase text size within tiles */
+    }
+
+    .ql_tile img {
+        width: 28px; /* Larger icon size within tiles */
+        height: 28px;
+        margin-bottom: 5px;
+    }
+
+    .ql_tile p {
+        font-size: 12px; /* Larger font size for tile labels */
+        line-height: 1.2; /* Adjust line height for readability */
+    }
+}
+
+/* ======================== Login Page Specific ======================== */
+@media (max-width: 768px) {
+    /* Login Form Adjustments */
+    #loginForm {
+        width: 90%; /* Full width on mobile */
+        padding: 15px;
+        margin: auto;
+    }
+
+    .right-align {
+        text-align: center; /* Center align links on mobile */
+    }
+
+    .password-wrapper {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ======================== About You Page Specific ======================== */
+@media (max-width: 768px) {
+    /* Adjust form fields on About You page */
+    #aboutyou-form {
+        width: 100%; /* Full width form on mobile */
+    }
+
+    .medium-input, .long-input {
+        width: 100%; /* Ensure inputs are full width */
+        box-sizing: border-box;
+    }
+}
+
+/* ======================== KMDB SAP ECC DDIC Page Specific ======================== */
+@media (max-width: 768px) {
+    /* Adjustments for data dictionary tables */
+    .sap-ecc-ddic-table {
+        font-size: 12px;
+        width: 100%;
+        overflow-x: scroll; /* Allow horizontal scroll on tables */
+    }
+
+    .subdomain-button {
+        font-size: 12px;
+        padding: 6px;
+        margin: 3px;
+    }
+}
+
+
+
+
+/* ===================================================== */
+/* ============== Header container styling ============= */
+/* ===================================================== */
+.header-container {
+    background-color: var(--secondary-light);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Hamburger menu icon styling */
+.header-container div {
+    font-size: 30px;
+    color: var(--primary);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Logo link and image styling */
+#logo-link img {
+    height: 40px;
+    width: auto;
+    padding-right: 3px;
+}
+
+
+nav {
+    position: fixed;
+    /* top: 40px; /* Adjust based on the header's height */ */
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--secondary);
+    z-index: 999;
+    display: none; /* Initially hidden */
+    max-height: calc(100vh - 60px); /* Limits the height of the nav to the viewport height minus the header height */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* Optional: Customize the scrollbar for better aesthetics */
+nav::-webkit-scrollbar {
+    width: 12px;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: var(--primary); /* Red color for the scrollbar thumb */
+    border-radius: 6px; /* Rounded edges */
+    border: 3px solid transparent; /* Optional: for inset shadow trick */
+    background-clip: padding-box; /* Required for inset shadow */
+}
+
+nav::-webkit-scrollbar-track {
+    background-color: var(--secondary-light); /* Light grey track */
+    border-radius: 6px; /* Rounded edges for the track */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: var(--secondary-light);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+/* Indicator for current page */
+nav ul li a span {
+    padding-right: 5px;
+    color: var(--primary); /* Red color for the triangle indicator */
+}
+
+/* Bold text for current page and section titles */
+nav ul li a,
+nav ul li span {
+    font-weight: normal; /* Default font weight */
+}
+
+nav ul li a.bold,
+nav ul li span.bold {
+    font-weight: bold; /* Bold font weight */
+}
+
+#jalur-image {
+    float: right;
+    position: fixed;
+    top: 7px;
+    right: 10px;
+    z-index: 1001;
+    transform: scale(0.80);
+    transform-origin: top right;
+}
+
+body, html {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    /* padding-top: 10px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* ===================================================== */
+/* ============== Action Buttons ======================= */
+/* ===================================================== */
+		.header_actionbox {
+			float: right; /* Aligns the action box to the right */
+		}
+
+		.icon-button {
+			/* border: none; */
+			border: 1px solid var(--secondary-light); /* Sets the border color to the primary color variable */
+			background: var(--primary);
+			cursor: pointer;
+			font-size: 12px;
+			color: var(--secondary);
+			padding: 5px; /* Maintains padding for better clickability */
+		}
+
+		.icon-button:hover {
+			color: var(--dark); /* Darker color on hover for better interaction feedback */
+			background-color: var(--secondary-light); /* Slight background on hover using secondary-light */
+		}
+/* ===================================================== */
+/* ============== Forms ================================ */
+/* ===================================================== */
+form {
+    width: 70%; /* Adjusted for better control */
+    max-width: 900px; /* Ensures the form doesn't get too wide */
+    margin: 0 auto;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	background-color: #f9f9f9; /* background-color: rgb(255, 200, 200); /* Very light shade of red */
+	margin-bottom: 30px;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: flex-start; /* Align elements to the start */
+    margin-bottom: 10px;
+}
+
+.feedback-label {
+	flex: 0 0 0;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* Ensure labels are right-aligned */
+label {
+    flex: 0 0 180px; /* Fixed width */
+    text-align: right; /* Right-align text in the label */
+    margin-right: 20px; /* Space between the label and the input */
+    font-size: 14px; /* Set the font size */
+    font-weight: bold;
+}
+
+/* Ensure input fields are left-aligned and have the same font size */
+.short-input, .medium-input, .long-input {
+    /* padding: 4px; */
+    /* margin-top: 3px; */
+    box-sizing: border-box;
+    font-size: 14px; /* Set the font size */
+    text-align: left; /* Left-align text in the input fields */
+}
+
+.short-input {
+    width: 100px; /* Specific width for short inputs */
+}
+
+.medium-input {
+    width: 250px; /* Specific width for medium inputs */
+}
+
+.long-input {
+    width: 500px; /* Specific width for longer inputs */
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--primary-light);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-container button,
+.button-container p {
+    margin: 0;
+}
+
+.button-container p {
+    display: flex;
+    align-items: center;
+}
+
+.button-container p span {
+    margin-right: 1ch;
+}
+
+html, body {
+    height: 100%; /* Ensure both html and body cover at least the full height of the viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Ensures that the body elements are arranged in a column */
+}
+
+main {
+    flex: 1 0 auto; /* Allows the main content to grow and fill available space */
+}
+
+footer {
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+    position: fixed; /* Keeps the footer at the bottom of the viewport */
+    bottom: 0;
+    width: 100%; /* Ensures the footer spans the full width of the viewport */
+    text-align: center; /* Center-align the footer text */
+    background-color: var(--secondary-light); /* Set background color */
+    padding: 2px; /* Combined padding from both sets */
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    font-style: italic;
+    box-sizing: border-box; /* Include padding and border in the width and height */
+    margin-top: 45px;
+}
+
+body {
+    margin-bottom: 60px; /* Adjust based on footer height */
+}
+
+
+/* .jalur_footer { */
+    /* margin: 0; /* Ensures there is no extra space around the footer */ */
+/* } */
+
+/* ===================================================== */
+/* Format checkboxes and radios to be red when selected */
+/* ===================================================== */
+/* Style for custom labels */
+/* input[type="radio"] + label, input[type="checkbox"] + label { */
+    /* display: inline-block; */
+    /* padding: 2px 8px; /* Reduced padding */ */
+    /* margin: 2px; /* Small margin to prevent overlap */ */
+    /* border-radius: 4px; /* Rounded corners */ */
+    /* cursor: pointer; /* Indicates that the label is clickable */ */
+    /* position: relative; /* Needed for absolute positioning of pseudo-elements */ */
+    /* left: 20px; /* Adjust as needed to align correctly */ */
+/* } */
+
+/* Hide default radio button and checkbox */
+/* input[type="radio"], input[type="checkbox"] { */
+    /* display: none; */
+/* } */
+
+/* Custom checkbox and radio button design */
+/* input[type="radio"] + label:before, input[type="checkbox"] + label:before { */
+    /* content: ''; */
+    /* position: absolute; /* Positioned absolutely within the label */ */
+    /* left: -20px; /* Moves the pseudo-element to the left of the label */ */
+    /* top: 50%; /* Centers vertically */ */
+    /* transform: translateY(-50%); /* Centers vertically */ */
+    /* width: 15px; */
+    /* height: 15px; */
+    /* background-color: var(--secondary); */
+    /* border: 1px solid #ccc; */
+/* } */
+
+/* Checked state for custom design */
+/* input[type="radio"]:checked + label:before { */
+    /* background-color: var(--primary); */
+    /* border-radius: 50%; */
+/* } */
+
+/* input[type="checkbox"]:checked + label:before { */
+    /* background-color: var(--primary); */
+/* } */
+
+/* Additional styles to create a checkmark inside checkboxes */
+/* input[type="checkbox"]:checked + label:before { */
+    /* content: '\2713'; /* Unicode character for check mark */ */
+    /* color: var(--secondary); */
+    /* font-size: 15px; */
+    /* text-align: center; */
+    /* line-height: 15px; /* Adjust based on size to center the check mark */ */
+/* } */
+
+/* Style for selected label backgrounds */
+/* input[type="radio"]:checked + label, */
+/* input[type="checkbox"]:checked + label { */
+    /* background-color: var(--primary); */
+    /* color: var(--secondary); */
+/* } */
+
+/* ===================================================== */
+/* Reveal Password */
+/* ===================================================== */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center; /* Centers the icon vertically relative to the input */
+}
+
+input[type=password] {
+    flex-grow: 1; /* Ensures the input takes up the available space */
+    margin-right: 10px; /* Adds space between the input and the icon */
+}
+
+.toggle-password {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    /* right: 10px; /* Positions the icon to the right inside the wrapper */ */
+    /* padding: 8px; */
+}
+
+/* ===================================================== */
+/* Custom Page Scrollbars */
+/* ===================================================== */
+/* Targets the scrollbar track (part the thumb slides within) */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+}
+
+/* Targets the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary); /* Red color for the scrollbar thumb */
+    border-radius: 6px; /* Rounded edges */
+    border: 3px solid transparent; /* Optional: for inset shadow trick */
+    background-clip: padding-box; /* Required for inset shadow */
+}
+
+/* Targets the part of the scrollbar track that is not being clicked by the mouse */
+::-webkit-scrollbar-track {
+    background-color: var(--secondary-light); /* Light grey track */
+    border-radius: 6px; /* Rounded edges for the track */
+}
+
+/* Optional: style the scrollbar corner */
+::-webkit-scrollbar-corner {
+    background-color: var(--dark);
+}
+
+/* ===================================================== */
+/* Services.html Page */
+/* ===================================================== */
+.tiles-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.tiles-page .tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tiles-page .tile img {
+    width: 100%;
+    height: auto; /* Keeps the image aspect ratio */
+}
+
+.tiles-page .tile a {
+    text-decoration: none;
+    color: var(--dark); /* Change the text color as needed */
+}
+
+.tile img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.tile img + p {
+    font-weight: bold;
+    color: var(--secondary);
+    font-size: larger;
+    background-color: var(--primary);
+    width: 100%; /* Make the width 100% of its container */
+    margin: 0; /* Remove margin to fit exactly below the image */
+    padding: 10px; /* Add padding inside the element */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.custom-bullets {
+    list-style: none; /* Removes default list styling */
+    padding-left: 0; /* Removes default padding */
+    margin-left: 0; /* Ensures there is no default margin affecting alignment */
+}
+
+.custom-bullets li {
+    position: relative; /* Allows absolute positioning relative to each li */
+    padding-left: 25px; /* Provides space for the custom bullet */
+    text-align: left; /* Ensures text is aligned to the left */
+}
+
+.custom-bullets li::before {
+    content: '\2713'; /* Unicode character for a check mark */
+    color: var(--primary); /* Sets the color of the check mark */
+    position: absolute; /* Positions the check mark absolutely within the li */
+    left: 0; /* Aligns the check mark at the start of the li */
+    top: 0; /* Aligns the check mark at the top of the li, adjust as needed */
+    font-size: 18px; /* Adjust the size as needed */
+}
+
+.subheading {
+    color: var(--secondary); /* Sets the text color to white */
+    background-color: var(--primary); /* Red background */
+    text-align: center; /* Centers the text */
+    width: 100%; /* Ensures the subheading spans the full width of the page */
+    padding: 10px 0; /* Adds padding above and below the text for better spacing */
+    margin: 20px 0; /* Adds vertical space around the subheadings */
+}
+
+
+.pageheading {
+    color: var(--secondary); /* The text color from the second block */
+    background-color: var(--primary); /* The background color from the second block */
+    text-align: left; /* Aligns the text to the left */
+    width: 100%; /* Ensures the subheading spans the full width of the page */
+    padding: 7px 20px 7px 20px; /* Padding from the second block */
+    margin: 20px 0; /* Vertical space around the subheadings from the second block */
+    margin-top: 40px; /* Margin-top from the second block */
+    box-sizing: border-box; /* box-sizing from the first block */
+    font-size: 18px; /* Sets the font size to 14px for elements with the class 'pageheading' */
+
+    /* position: fixed; */
+    /* top: 0; */
+    /* z-index: 1000; /* Ensure it stays on top of other content */ */
+}
+
+
+
+
+.header-background {
+    background-color: var(--secondary-light); /* Light grey background */
+    width: 100%; /* Ensures it spans the full width of the page */
+    position: fixed; /* Fixes the position of the element */
+    top: 0; /* Positions it at the very top of the page */
+    left: 0; /* Positions it at the very left of the page */
+    height: 60px; /* Adjust the height as needed */
+    z-index: -1; /* Ensures it is behind other objects */
+}
+
+/* ===================================================== */
+/* ============== Whitepapers ============= */
+/* ===================================================== */
+.wp_executive-summary {
+    background-color: var(--secondary-light);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.wp_container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+.jalur-page body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.jalur-page h1 {
+    color: var(--secondary); /* Sets the text color to white */
+    background-color: var(--primary); /* Red background */
+    text-align: left; /* Aligns the text to the left */
+    padding: 10px 0 10px 20px; /* Adds padding above, below, and to the left of the text */
+    margin: 20px 0; /* Adds vertical space around the subheadings */
+    margin-top: 55px; /* Ensures the subheading starts 55px from the top of the page */
+}
+
+.jalur-page h2 {
+    color: var(--primary);
+}
+
+.jalur-page .content {
+    margin-top: 20px;
+}
+
+.jalur-page .section {
+    margin-bottom: 20px;
+}
+
+.jalur-page p, .jalur-page li {
+    color: var(--dark);
+}
+
+.jalur-page .highlight, .jalur-page .bold {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.jalur-page ul {
+    list-style: none;
+    padding: 0;
+}
+
+.jalur-page ul li::before {
+    content: "• ";
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.jalur-page table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.jalur-page th, .jalur-page td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.jalur-page th {
+    background-color: #f2f2f2;
+}
+
+.jalur-page .green-tick {
+    color: green;
+    font-size: 1.5em;
+}
+
+.jalur-page .red-cross {
+    color: red;
+    font-size: 1.5em;
+}
+
+/* ===================================================== */
+/* ============== Popups like site feedback ============ */
+/* ===================================================== */
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary);
+    padding: 20px;
+    /* border: 2px solid var(--primary); */
+    z-index: 1001;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 150px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ===================================================== */
+/* ============== Meeting Mintue Taker page ============ */
+/* ===================================================== */
+        #meetingManagerContainer {
+            font-family: Arial, sans-serif;
+            color: #d3d3d3; /* Light grey */
+        }
+        #meetingManagerContainer .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #meetingManagerContainer input,
+        #meetingManagerContainer textarea,
+        #meetingManagerContainer select {
+            padding: 8px;
+            margin: 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            width: 100%;
+            background-color: #333; /* Dark grey input background */
+            color: #d3d3d3; /* Light grey text */
+        }
+        #meetingManagerContainer button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        #meetingManagerContainer button:hover {
+            opacity: 0.8;
+        }
+        #meetingManagerContainer .time-info,
+        #meetingManagerContainer .meeting-form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the start to avoid stretching */
+            margin-bottom: 10px; /* Add some margin between form groups */
+        }
+        #meetingManagerContainer .meeting-form-group div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px; /* Add space between columns */
+        }
+        #meetingManagerContainer .meeting-form-group div:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+        #meetingManagerContainer .meeting-point {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #333; /* Dark grey background for meeting points */
+        }
+        #meetingManagerContainer .full-width {
+            width: 100%;
+        }
+        #meetingManagerContainer .half-width {
+            width: calc(50% - 10px); /* Adjusted to use available space */
+            margin-right: 10px;
+        }
+        #meetingManagerContainer .eighty-width {
+            width: calc(80% - 10px);
+        }
+        #meetingManagerContainer .twenty-width {
+            width: calc(20% - 10px);
+        }
+        #meetingManagerContainer .label {
+            display: block;
+            font-size: 0.9em;
+            color: #d3d3d3; /* Light grey */
+            margin-bottom: 2px; /* Reduced margin */
+            text-align: left;
+            line-height: 1.2em; /* Adjusted line height */
+        }
+
+
+/* ===================================================== */
+/* ============== Universal Compact Table ============== */
+/* ===================================================== */
+.universal_compact_table {
+    max-width: 90%;
+    border-collapse: collapse;
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    border-spacing: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table headers and data cells */
+.universal_compact_table th,
+.universal_compact_table td {
+    border: 1px solid #ddd;
+    padding: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Keep the header row and first row stickyish.  */
+/* This is with the assumption that the header row is actually the 2nd row and the first row contains the filtered fields.  */
+.universal_compact_table thead tr th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.universal_compact_table thead tr:nth-child(2) th {
+  top: 35px;
+  z-index: 2;
+}
+
+
+/* Ensure th allows resizer */
+.universal_compact_table th {
+    position: relative; /* Needed for .resizer positioning */
+    overflow: visible;  /* Allow resizer to be visible */
+    background-color: var(--primary);
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+/* Header content container still truncates text */
+.universal_compact_table th > div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Highlight alternating rows */
+.universal_compact_table tbody tr:nth-child(even) {
+    background-color: var(--secondary-light);
+}
+
+.universal_compact_table tbody tr:hover {
+    background-color: var(--secondary);
+}
+
+.universal_compact_table tbody td {
+    text-align: left;
+}
+
+/* First column alignment and width */
+.universal_compact_table th:first-child,
+.universal_compact_table td:first-child {
+    text-align: center;
+    width: 5%;
+}
+
+/* Column resizer */
+.resizer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    cursor: col-resize;
+    z-index: 10;
+    background-color: transparent; /* change to rgba(0,0,0,0.2) for debug */
+}
+
+.resizer:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Optional hover highlight */
+}

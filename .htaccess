@@ -1,0 +1,29 @@
+RewriteEngine on
+
+AddType application/javascript .js
+
+# Block access unless coming from jalur.co or ptr.com
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?jalur\.co/ [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?procuretoreport\.com/ [NC]
+
+# This blocks empty referrers
+RewriteCond %{HTTP_REFERER} !^$
+
+RewriteRule .*\.(jpg|jpeg|png|gif|svg|webp)$ /unauthorized_access.html [R=302,L]
+
+
+# Enable Expires Headers for Caching (Performance Optimization)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access plus 1 week"
+</IfModule>
+
+php_value date.timezone UTC

@@ -1,0 +1,6 @@
+.env*
+
+error_log
+*test*
+
+/vendor/
