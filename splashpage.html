@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- ========== Boiler Plate (head) ========== -->
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="icon" type="image/x-icon" href="/images/jalur.ico">
+	<link rel="stylesheet" href="/styles.css">
+	<script src="/message_response.js"></script>
+	<script src="/nav.js"></script>
+	<script src="/apiHelper.js"></script>
+	<script src="/jsonHelper.js"></script>
+	<script src="/footer.js"></script>
+	<!-- ========== Boiler Plate (head) ========== -->
+	<title>Splash Page</title>
+	<style>
+		.section-box {
+			margin: 20px;
+			padding: 10px;
+			border-radius: 10px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		}
+		.subsection-box {
+			margin: 10px 0;
+			padding: 10px;
+			border: 1px solid var(--dark-light);
+			background-color: var(--secondary-light);
+			border-radius: 6px;
+		}
+		.page-link {
+			display: inline-block;
+			margin: 4px;
+			padding: 6px 10px;
+			border: 1px solid var(--primary);
+			border-radius: 4px;
+			text-decoration: none;
+			background-color: var(--primary-light);
+			color: var(--dark);
+			font-size: 0.9em;
+		}
+		.page-link:hover {
+			background-color: var(--primary);
+			color: white;
+		}
+		.section-title {
+			font-size: 1.4em;
+			font-weight: bold;
+		}
+		.subsection-title {
+			font-size: 1.1em;
+			font-weight: bold;
+			margin-bottom: 6px;
+		}
+
+    .icon-button {
+        font-size: 14px !important;
+    }
+
+	</style>
+</head>
+<body>
+	<header>
+		<h2 class="pageheading">Splash Page
+			<div class="header_actionbox"></div>
+		</h2>
+	</header>
+
+	<main id="content" style="padding: 20px;"></main>
+
+	<script>
+		function waitForNavLinksAndBuild() {
+			const navLinksRaw = sessionStorage.getItem('navLinks');
+			if (!navLinksRaw) {
+				setTimeout(waitForNavLinksAndBuild, 100);
+				return;
+			}
+			buildSplashPage();
+		}
+
+		function buildSplashPage() {
+			const navLinks = JSON.parse(sessionStorage.getItem('navLinks') || '[]');
+			if (!Array.isArray(navLinks) || navLinks.length === 0) return;
+
+			const grouped = [];
+			const sectionMap = new Map();
+
+			navLinks.forEach(item => {
+				if (item.Hidden !== 'N') return;
+				if (!item.Section || item.Section.trim() === '') return;
+
+				let sectionGroup = sectionMap.get(item.Section);
+				if (!sectionGroup) {
+					sectionGroup = {
+						sectionName: item.Section,
+						sectionSort: item.SectionSort ?? 999,
+						subsections: [],
+						subsectionMap: new Map()
+					};
+					grouped.push(sectionGroup);
+					sectionMap.set(item.Section, sectionGroup);
+				}
+
+				let subGroup = sectionGroup.subsectionMap.get(item.SubSection);
+				if (!subGroup) {
+					subGroup = {
+						subsectionName: item.SubSection || 'General',
+						subsectionSort: item.SubSectionSort ?? 999,
+						pages: []
+					};
+					sectionGroup.subsections.push(subGroup);
+					sectionGroup.subsectionMap.set(item.SubSection, subGroup);
+				}
+
+				subGroup.pages.push(item);
+			});
+
+			const content = document.getElementById('content');
+			let colorToggle = true;
+
+			grouped.forEach(section => {
+				const sectionBox = document.createElement('div');
+				sectionBox.className = 'section-box';
+				sectionBox.style.backgroundColor = colorToggle ? 'var(--primary-light)' : 'var(--secondary-light)';
+				colorToggle = !colorToggle;
+
+				const sectionTitle = document.createElement('div');
+				sectionTitle.className = 'section-title';
+				sectionTitle.textContent = section.sectionName;
+				sectionBox.appendChild(sectionTitle);
+
+				section.subsections.forEach(sub => {
+					const subBox = document.createElement('div');
+					subBox.className = 'subsection-box';
+
+					const subTitle = document.createElement('div');
+					subTitle.className = 'subsection-title';
+					subTitle.textContent = sub.subsectionName;
+					subBox.appendChild(subTitle);
+
+					sub.pages.forEach(page => {
+						const button = document.createElement('button');
+						button.className = 'icon-button';
+						button.textContent = page.title;
+						button.onclick = () => window.location.href = page.href;
+						subBox.appendChild(button);
+					});
+
+					sectionBox.appendChild(subBox);
+				});
+
+				content.appendChild(sectionBox);
+			});
+
+			if (sessionStorage.getItem('navReloaded') === 'true') {
+				setTimeout(() => sessionStorage.removeItem('navReloaded'), 500); // safely after build
+			}
+		}
+
+		waitForNavLinksAndBuild();
+	</script>
+
+</body>
+</html>
